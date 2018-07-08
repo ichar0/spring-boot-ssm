@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.spssm.ssmspringboot.mapper.UserMapper">
+    <insert id="insertUser" parameterType="com.spssm.ssmspringboot.model.UserModel" >
+         insert into t_user (username,password,account) values (#{username},#{password},#{account})
+    </insert>
+
+    <!--<select id="getClassAndTeach" resultMap="ClassAndTeach">-->
+        <!--select * from class c, teacher t where c.teacher_id=t.t_id and c.c_id=1-->
+    <!--</select>-->
+    <!--<resultMap id="ClassAndTeach" type="com.spssm.ssmspringboot.model.Classes">-->
+        <!--<id property="id" column="c_id"/>-->
+        <!--<result property="name" column="c_name"/>-->
+        <!--<association property="teacher" javaType="com.spssm.ssmspringboot.model.Teacher">-->
+            <!--<id property="id" column="t_id"/>-->
+            <!--<result property="name" column="t_name"/>-->
+        <!--</association>-->
+    <!--</resultMap>-->
+
+    <!--<select id="getAllstudnet" resultMap="ClassResultMap3">-->
+        <!--SELECT * FROM class c, teacher t,student s WHERE c.teacher_id=t.t_id AND c.C_id=s.class_id AND  c.c_id=1-->
+    <!--</select>-->
+    <!--<resultMap type="com.spssm.ssmspringboot.model.Classes" id="ClassResultMap3">-->
+        <!--<id property="id" column="c_id"/>-->
+        <!--<result property="name" column="c_name"/>-->
+        <!--<association property="teacher" column="teacher_id" javaType="com.spssm.ssmspringboot.model.Teacher">-->
+            <!--<id property="id" column="t_id"/>-->
+            <!--<result property="name" column="t_name"/>-->
+        <!--</association>-->
+        <!--&lt;!&ndash; ofType指定students集合中的对象类型 &ndash;&gt;-->
+        <!--<collection property="students" ofType="com.spssm.ssmspringboot.model.Student">-->
+            <!--<id property="id" column="s_id"/>-->
+            <!--<result property="name" column="s_name"/>-->
+        <!--</collection>-->
+    <!--</resultMap>-->
+</mapper>
